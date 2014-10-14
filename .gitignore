@@ -42,4 +42,5 @@ pkg
 # ignore all module fixtures directories that may exist,
 # except this module's fixtures directory
 spec/fixtures/modules/*
-!spec/fixtures/modules/redis
+# We used to ignore the module itself, we no longer do this
+#!spec/fixtures/modules/puppet-redis

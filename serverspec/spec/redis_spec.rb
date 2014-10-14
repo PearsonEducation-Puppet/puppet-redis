@@ -32,8 +32,8 @@ describe file('/var/lib/redis/') do
 end
 
 describe command('redis-cli --version') do
-  it { should return_exit_status 0 }
-  it { should return_stdout /^redis-cli.*/ }
+  its(:exit_status) { should eq 0 }
+  its(:stdout) { should match /^redis-cli.*/ }
 end
 
 describe linux_kernel_parameter('vm.overcommit_memory') do 

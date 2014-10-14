@@ -150,6 +150,17 @@ maxclients <%= @conf_maxclients %>
 maxmemory <%= @conf_maxmemory %>
 <% end %>
 
+# maxmemory-policy
+<% if @conf_maxmemory_policy != 'UNSET' %>
+maxmemory-policy <%= @conf_maxmemory_policy %>
+<% end %>
+
+# maxmemory-samples
+<% if @conf_maxmemory_samples!= 'UNSET' %>
+maxmemory-samples <%= @conf_maxmemory_samples %>
+<% end %>
+
+
 ############################## APPEND ONLY MODE ###############################
 
 # By default Redis asynchronously dumps the dataset on disk. If you can live
