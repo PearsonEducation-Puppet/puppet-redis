@@ -15,11 +15,11 @@ cat <<EOF > /etc/puppet/hiera.yaml
 EOF
 }
 
-STAGE='/tmp/magnum-vagrant-stage'
+STAGE='/tmp/doozer-vagrant-stage'
 
 if [ ! -e $STAGE ]; then
 
-  echo "Initial provision, running the magnum-vagrant shell provisioner script..."
+  echo "Initial provision, running the doozer-vagrant shell provisioner script..."
 
   # update system apt cache
   apt-get update
@@ -39,7 +39,7 @@ if [ ! -e $STAGE ]; then
   touch $STAGE
 
 else
-  echo "Not initial provision, skipping the magnum-vagrant shell provisioner script..."
+  echo "Not initial provision, skipping the doozer-vagrant shell provisioner script..."
 fi
 
 exit 0
